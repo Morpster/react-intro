@@ -4,7 +4,7 @@ import { getImage } from "../server";
 import { Post, Image, useTitle } from "./FeedPage";
 
 function DetailPage()  {
-
+  // useTitle(`📷 av ${image.username}`); <- hooow
   const useImage = (id) => {
     const [image, setImage] = React.useState(null);
     useEffect(() => {
@@ -18,8 +18,6 @@ function DetailPage()  {
   if (!image) {
     return null;
   };
-
-  // useTitle(`📷 av ${image.username}`); <- hooow
   
   return (
     <div className="detail">

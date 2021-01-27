@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import FeedPage from "./pages/FeedPage";
 import DetailPage from "./pages/DetailPage";
+import AddPhoto from "./pages/AddPhoto";
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
         <Route exact path="/post/:id">
           <DetailPage />
         </Route>
+        <Route exact path="/addphoto">
+          <AddPhoto />
+        </Route>
         </Switch>
       </div>
     </Router>
@@ -32,6 +36,7 @@ function Header() {
       <h1>
         <Link to="/">Bekkstagram</Link>
       </h1>
+      <Link to="/addphoto">+</Link>
     </header>
   )
 }
